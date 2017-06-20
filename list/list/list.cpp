@@ -17,6 +17,7 @@ int main()
 	int v;
 	cin >> v;
 	n->value = v;
+	
 	//cout << n->value << endl;
 	int idx = 0;
 	cout << "We'll be adding values to the end" << endl;
@@ -28,9 +29,7 @@ int main()
 			cout << "Enter Your Value: ";
 			int val;
 			cin >> val;
-			Node*tmp = new Node();
-			tmp->value = val;
-			tmp->addNodeToEnd(tmp, head);
+			n->addNodeToEnd(head, val);
 		}break;
 		case 2: {
 			cout << "Printing The Values!" << endl;
@@ -41,6 +40,7 @@ int main()
 		}break;
 		}
 	}
+	
     return 0;
 }
 

@@ -17,7 +17,10 @@ struct Node
 		}
 		cout << endl;
 	}
-	void addNodeToEnd(Node *n, Node* head) {
+	void addNodeToEnd(Node* head, int v) {
+		Node *n = new Node();
+		n->value = v;
+		n->next = NULL;
 		if (head->next == NULL) {
 			head->next = n;
 		}
@@ -29,6 +32,20 @@ struct Node
 			idx->next = n;
 		}
 	}
-
+	//Add to the beginning
+	void addNodeToFront(Node* head, int v) {
+		Node *n = new Node();
+		n->value = v;
+		n->next = NULL;
+		if (head == NULL) {
+			head = n;
+		}
+		else {
+			Node *tmp = head;
+			head = n;
+			n->next = tmp;
+			tmp = NULL;
+		}
+	}
 };
 //Node*head = NULL;
